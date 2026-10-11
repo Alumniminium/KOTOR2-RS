@@ -1,5 +1,5 @@
 # Whitelist: nothing is tracked unless listed here, so game data, extracted
-# assets, screenshots and saves can never be committed by accident. Add new
+# assets, stray screenshots and saves can never be committed by accident. Add new
 # tracked file kinds deliberately (see AGENTS.md).
 *
 !*/
@@ -27,5 +27,6 @@ target/
 
 # Docs and tools
 !docs/**/*.md
+!docs/screenshots/*.jpg
 !tools/*.sh
 !tools/*.py

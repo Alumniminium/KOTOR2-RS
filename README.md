@@ -8,6 +8,24 @@ contains no game files.
 Status: playable from New Game (character creation, Ebon Hawk prologue,
 Peragus onward) on the Aspyr Linux build, with known gaps below.
 
+## Screenshots
+
+Captured from kotor2-rs running on the Aspyr Linux data (`--screenshot`
+runs, 1067x800).
+
+<p>
+<a href="docs/screenshots/01-main-menu.jpg"><img src="docs/screenshots/01-main-menu.jpg" width="32%" alt="Main menu" title="Main menu"></a> <a href="docs/screenshots/02-chargen.jpg"><img src="docs/screenshots/02-chargen.jpg" width="32%" alt="Character creation" title="Character creation"></a> <a href="docs/screenshots/03-peragus-medbay.jpg"><img src="docs/screenshots/03-peragus-medbay.jpg" width="32%" alt="Peragus medbay" title="Peragus medbay"></a>
+</p>
+<p>
+<a href="docs/screenshots/04-telos.jpg"><img src="docs/screenshots/04-telos.jpg" width="32%" alt="Telos: Lieutenant Grenn" title="Telos: Lieutenant Grenn"></a> <a href="docs/screenshots/05-dxun.jpg"><img src="docs/screenshots/05-dxun.jpg" width="32%" alt="Dxun" title="Dxun"></a> <a href="docs/screenshots/06-onderon.jpg"><img src="docs/screenshots/06-onderon.jpg" width="32%" alt="Onderon" title="Onderon"></a>
+</p>
+<p>
+<a href="docs/screenshots/07-dantooine.jpg"><img src="docs/screenshots/07-dantooine.jpg" width="32%" alt="Dantooine: Khoonda" title="Dantooine: Khoonda"></a> <a href="docs/screenshots/08-korriban.jpg"><img src="docs/screenshots/08-korriban.jpg" width="32%" alt="Korriban" title="Korriban"></a> <a href="docs/screenshots/09-inventory.jpg"><img src="docs/screenshots/09-inventory.jpg" width="32%" alt="Inventory" title="Inventory"></a>
+</p>
+<p>
+<a href="docs/screenshots/10-swoop-race.jpg"><img src="docs/screenshots/10-swoop-race.jpg" width="32%" alt="Swoop racing" title="Swoop racing"></a> <a href="docs/screenshots/11-turret.jpg"><img src="docs/screenshots/11-turret.jpg" width="32%" alt="Turret minigame" title="Turret minigame"></a>
+</p>
+
 ## What works
 
 - Rendering of every area: K2 models (3237/3237 parse), textures, lightmaps,
