@@ -1,0 +1,20 @@
+[package]
+name = "k2-script"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+k2-res.workspace = true
+rakata-core.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+
+[[bin]]
+name = "ncsdis"
+path = "src/bin/ncsdis.rs"
+
+[[bin]]
+name = "ncsrun"
+path = "src/bin/ncsrun.rs"

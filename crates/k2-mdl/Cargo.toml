@@ -1,0 +1,12 @@
+[package]
+name = "k2-mdl"
+description = "KotOR/KotOR2 binary MDL/MDX reader, vendored from rakata with K2 support"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+rakata-core.workspace = true
+rakata-formats.workspace = true
+thiserror.workspace = true

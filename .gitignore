@@ -1,0 +1,31 @@
+# Whitelist: nothing is tracked unless listed here, so game data, extracted
+# assets, screenshots and saves can never be committed by accident. Add new
+# tracked file kinds deliberately (see AGENTS.md).
+*
+!*/
+
+# Build output (never descend into it).
+target/
+
+# Root files
+!.gitignore
+!LICENSE
+!README.md
+!AGENTS.md
+!Cargo.toml
+!Cargo.lock
+!rust-toolchain.toml
+!rustfmt.toml
+!clippy.toml
+!.cargo/config.toml
+
+# Source: Rust, manifests, crate docs, shaders
+!crates/**/*.rs
+!crates/**/Cargo.toml
+!crates/**/*.md
+!crates/**/*.wgsl
+
+# Docs and tools
+!docs/**/*.md
+!tools/*.sh
+!tools/*.py

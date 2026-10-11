@@ -1,0 +1,28 @@
+[package]
+name = "kotor2"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+# mp3: stream voice/music; wav: SFX and plain WAV resources.
+bevy = { workspace = true, features = ["mp3", "wav", "mesh_picking"] }
+bevy_egui.workspace = true
+k2-res.workspace = true
+k2-mdl.workspace = true
+rakata-core.workspace = true
+rakata-formats.workspace = true
+texpresso.workspace = true
+k2-walk.workspace = true
+k2-data.workspace = true
+k2-world.workspace = true
+k2-script.workspace = true
+# SIGTERM/SIGINT/SIGHUP handlers (ctl.rs): the game saves on exit.
+libc = "0.2"
+# Settings file (graphics.rs).
+serde.workspace = true
+serde_json.workspace = true
+# Logging (logging.rs): same crate Bevy uses (0.3.23, latest), plus the JSON
+# trace layer, which Bevy does not enable.
+tracing-subscriber = { version = "0.3.23", features = ["json"] }

@@ -1,0 +1,30 @@
+[package]
+name = "k2-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+k2-world.workspace = true
+rmcp.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+schemars.workspace = true
+# SIGTERM, SIGINT and SIGHUP end the session cleanly (the game is stopped first).
+tokio = { workspace = true, features = ["signal"] }
+# Log filter for logs_tail (latest release, checked on crates.io).
+regex = "1.13.1"
+# Screenshot content: the PNG as base64 (the same base64 release rmcp uses).
+base64 = "0.23.1"
+# SIGTERM to the game process this server started, when it ignores the quit request.
+libc = "0.2.190"
+
+[[bin]]
+name = "k2-mcp"
+path = "src/main.rs"
+
+# A stand-in for the game, run by the tests through K2_MCP_GAME_BIN.
+[[bin]]
+name = "k2-mcp-fake-game"
+path = "src/bin/fake_game.rs"

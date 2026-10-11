@@ -1,0 +1,28 @@
+[package]
+name = "k2-world"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+k2-res.workspace = true
+k2-data.workspace = true
+k2-walk.workspace = true
+k2-script.workspace = true
+k2-mdl.workspace = true
+rakata-core.workspace = true
+rakata-formats.workspace = true
+glam = { workspace = true, features = ["serde"] }
+thiserror.workspace = true
+serde.workspace = true
+ciborium.workspace = true
+serde_json.workspace = true
+# Span tracing of the simulation and the control API (tracing-subscriber lives in the game).
+tracing = "0.1"
+# Argument types of the control API (control.rs) double as MCP tool schemas.
+schemars.workspace = true
+
+[[bin]]
+name = "k2world"
+path = "src/bin/k2world.rs"

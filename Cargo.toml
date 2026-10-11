@@ -1,0 +1,46 @@
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "GPL-2.0-or-later"
+publish = false
+
+[workspace.dependencies]
+k2-res = { path = "crates/k2-res" }
+k2-mdl = { path = "crates/k2-mdl" }
+k2-data = { path = "crates/k2-data" }
+k2-walk = { path = "crates/k2-walk" }
+k2-script = { path = "crates/k2-script" }
+k2-world = { path = "crates/k2-world" }
+bevy = "0.19.1"
+# Immediate-mode UI for the area editor (editor/ui.rs). 0.42 is the newest
+# stable line on Bevy 0.19 (0.43 is rc and tracks Bevy main).
+bevy_egui = { version = "0.42.0", default-features = false, features = ["render", "bevy_ui", "picking", "default_fonts", "manage_clipboard"] }
+texpresso = "2.0.2"
+# Same major as bevy_math 0.19 so k2-walk types pass straight into Bevy.
+glam = "0.32"
+# K1-targeted format library (GPL-2.0-or-later), not on crates.io, so pinned
+# to a rev. K2 divergences are tracked in docs/notes/.
+rakata-core = { git = "https://codeberg.org/Synchro/rakata.git", rev = "6377ce37c278953c5613940253b579ee8dbee4e2" }
+rakata-formats = { git = "https://codeberg.org/Synchro/rakata.git", rev = "6377ce37c278953c5613940253b579ee8dbee4e2" }
+thiserror = "2"
+# Save games (k2-script values, k2-world state). rc: Arc<str> / Arc<T>.
+serde = { version = "1.0.229", features = ["derive", "rc"] }
+# Save games: self-describing CBOR, struct fields keyed by name, so saves
+# survive added and removed fields (docs/notes/saves.md).
+ciborium = "0.2.2"
+serde_json = "1.0.151"
+# Remote control (docs/notes/mcp-control.md): JSON Schema for the command
+# arguments, and the MCP server (crates/k2-mcp) on the official Rust SDK.
+schemars = "1.2.2"
+rmcp = { version = "3.5.1", features = ["transport-io"] }
+tokio = { version = "1.53.2", features = ["rt-multi-thread", "macros", "io-std", "sync"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

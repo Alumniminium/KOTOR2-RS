@@ -1,0 +1,16 @@
+[package]
+name = "k2-walk"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+glam.workspace = true
+rakata-core.workspace = true
+rakata-formats.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+k2-res.workspace = true
+k2-mdl.workspace = true

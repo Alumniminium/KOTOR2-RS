@@ -1,0 +1,13 @@
+[package]
+name = "k2probe"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+k2-res.workspace = true
+k2-data.workspace = true
+k2-mdl.workspace = true
+rakata-core.workspace = true
+rakata-formats.workspace = true
